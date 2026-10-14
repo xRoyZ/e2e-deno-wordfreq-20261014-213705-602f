@@ -1,4 +1,5 @@
 import type { WordCount } from "./count.ts";
+import { CliError } from "./errors.ts";
 
 /**
  * Rendering of the counted entries for stdout.
@@ -11,5 +12,17 @@ export function renderEntries(
   entries: WordCount[],
   options: { json: boolean },
 ): string {
-  return "";
+  if (entries.length === 0) {
+    throw new CliError("wordfreq: keine Wörter gefunden", 1);
+  }
+
+  if (options.json) {
+    const payload = entries.map((entry) => ({
+      word: entry.word,
+      count: entry.count,
+    }));
+    return `${JSON.stringify(payload)}\n`;
+  }
+
+  return entries.map((entry) => `${entry.word}\t${entry.count}`).join("\n") + "\n";
 }
