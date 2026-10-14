@@ -1,0 +1,27 @@
+{
+  "runcontract": 1,
+  "services": [
+    {
+      "name": "wordfreq",
+      "dir": ".",
+      "stack": "deno",
+      "kind": "cli",
+      "install": [["deno", "install"]],
+      "start": ["deno", "run", "--allow-read", "main.ts"],
+      "test": [["deno", "test", "--allow-all"]],
+      "typecheck": [
+        [
+          "deno",
+          "check",
+          "main.ts",
+          "src/args.ts",
+          "src/errors.ts",
+          "src/input.ts",
+          "src/count.ts",
+          "src/output.ts",
+          "tests/args_test.ts"
+        ]
+      ]
+    }
+  ]
+}
