@@ -7,7 +7,7 @@
       "stack": "deno",
       "kind": "cli",
       "install": [["deno", "install"]],
-      "start": ["deno", "run", "--allow-read", "main.ts"],
+      "start": ["deno", "run", "--allow-read", "main.ts", "--help"],
       "test": [["deno", "test", "--allow-all"]],
       "typecheck": [
         [

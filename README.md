@@ -45,10 +45,11 @@ deno task start -- --help
 ```
 
 Ein separater Build-Schritt für die Produktion ist nicht nötig, da Deno
-TypeScript direkt ausführt. Der in `RUN.json` hinterlegte Start-Befehl ist:
+TypeScript direkt ausführt. Der in `RUN.json` hinterlegte Start-Befehl ruft das
+Hilfe-Schema auf, damit der Start ohne zusätzliche Argumente gelingt:
 
 ```sh
-deno run --allow-read main.ts
+deno run --allow-read main.ts --help
 ```
 
 ## Die Deno-Tasks
