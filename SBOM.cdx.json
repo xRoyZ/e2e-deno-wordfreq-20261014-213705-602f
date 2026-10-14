@@ -1,0 +1,68 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:aa67a7d1-795f-41e2-9537-78bff997a5c4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-14T19:59:25Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.51.1"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "20e1156615475b2f",
+      "type": "file",
+      "name": "e2e-deno-wordfreq-20261014-213705-602f"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:github/actions/checkout@v4?package-id=fa2e67b8c20f75f3",
+      "type": "library",
+      "name": "actions/checkout",
+      "version": "v4",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v4:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@v4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github.flows/ci.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7561d461b00ff11d",
+      "type": "file",
+      "name": "./.github.flows/ci.yml",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "ad2ad62a62c04a3e19409fecc6e12c20fdb89251"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "3f7635ffa4c25f7df2eae6fc07c0f4aeb480d1e3be74beb47c506b744f939876"
+        }
+      ]
+    }
+  ]
+}
